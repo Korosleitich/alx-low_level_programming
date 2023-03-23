@@ -1,34 +1,41 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-* print_triangle -  checks for checks for a digit (0 through 9).
-* @size: size -  Variable
-* Return: Always 0.
-*/
-void print_triangle(int size)
-{
-int x, y;
+ * main - finds and prints the largest prime factor of the number
+ * 612852475143
+ * Return: 0.
+ */
 
-if (size > 0)
+int main(void)
+
 {
-for (x = 1; x <= size; x++)
-{
-for (y = 1; y <= size; y++)
-{
-if (y <= size - x)
-{
-_putchar(' ');
-}
-else
-{
-_putchar('#');
-}
-}
-_putchar('\n');
-}
-}
-else
-{
-_putchar('\n');
-}
+
+	long num = 612852475143;
+
+	long divisor = 2;
+
+	long larg_prim = 0;
+
+	while (num != 1)
+
+	{
+
+	if (num % divisor == 0)
+
+	{
+
+	num = num / divisor;
+
+	larg_prim = divisor;
+
+	}
+
+	divisor += 1;
+
+	}
+
+	printf("%ld\n", larg_prim);
+
+	return (0);
+
 }
