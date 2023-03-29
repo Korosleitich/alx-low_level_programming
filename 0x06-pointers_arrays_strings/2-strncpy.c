@@ -3,10 +3,10 @@
 /**
  * _strncpy - Copies at most an inputted number
  * of bytes from string into dest.
- * @dest: the buffer storing the string copy
- * @src: the source string
- * @n: the maximum number to the rsultig string dest
- * Return : A pointer to the rsulting string dest.
+ * @dest: The buffer storing the string copy.
+ * @src: The source string.
+ * @n: The maximum number of bytes copied from src.
+ * Return : dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
