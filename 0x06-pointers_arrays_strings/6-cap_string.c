@@ -1,21 +1,36 @@
 #include "main.h"
 
 /**
- * print_array - prints n elements of an array of integers
- * @a: the array of integers
- * @n: the number of elements to print
- *
- * Return: void
+ * cap_string - Capitalizes all words of a string
+ * @str: The string to be capitalized
+ * Return: A pointer to the changed string.
  */
 
-void print_array(int *a, int n)
+char *cap_string(char *str)
 {
-int i;
-for (i = 0; i < n; i++)
+int index = 0;
+while (str[index])
 {
-printf("%d", a[i]);
-if (i != n - 1)
-printf(", ");
+while (!(str[index] >= 'a' && str[index] <= 'z'))
+index++;
+if (index != 0 &&
+(str[index - 1] == ' ' ||
+str[index - 1] == '\t' ||
+str[index - 1] == '\n' ||
+str[index - 1] == ',' ||
+str[index - 1] == ';' ||
+str[index - 1] == '.' ||
+str[index - 1] == '!' ||
+str[index - 1] == '?' ||
+str[index - 1] == '"' ||
+str[index - 1] == '(' ||
+str[index - 1] == ')' ||
+str[index - 1] == '{' ||
+str[index - 1] == '}'))
+{
+str[index] -= 32;
 }
-printf("\n");
+index++;
+}
+return (str);
 }
