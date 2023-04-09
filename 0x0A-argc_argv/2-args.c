@@ -7,15 +7,13 @@
  *
  * Return: 0
  */
+
 int main(int argc, char **argv)
 {
-int y = 0;
+int y  = 0;
 do {
 printf("%s\n", argv[y]);
 y++;
-}
-while {
-(y < argc);
+} while (y < argc);
 return (0);
-}
 }
