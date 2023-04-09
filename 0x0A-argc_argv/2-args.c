@@ -5,7 +5,7 @@
  * @argc: argument counting
  * @argv: args
  *
- * Return: 0  on success
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
