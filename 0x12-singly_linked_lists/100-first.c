@@ -3,7 +3,8 @@
 void __attribute__((constructor)) hare(void);
 
 /**
-* name - Prints a string before the main function is executed.
+* name - Prints a string before the main
+* function is executed.
 */
 void name(void)
 {
