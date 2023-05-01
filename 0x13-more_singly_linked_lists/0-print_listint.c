@@ -9,12 +9,12 @@
 size_t print_listint(const listint_t *h)
 {
 size_t hez = 0;
-const listint_t *current = h;
-while (h)
+const listint_t *koros = h;
+while (koros != NULL)
 {
-printf("%d\n", h->n);
+printf("%d\n", koros->n);
+koros = koros->next;
 hez++;
-h = h->next;
 }
 
 return (hez);
