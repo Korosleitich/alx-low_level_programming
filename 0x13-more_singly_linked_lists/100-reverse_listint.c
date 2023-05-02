@@ -23,4 +23,3 @@ temp = *head;
 
  return (*head);
 }
-
