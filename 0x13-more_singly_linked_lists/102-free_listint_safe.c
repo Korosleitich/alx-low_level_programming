@@ -8,27 +8,28 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
- listint_t *function = head;
- listint_t *koros = head;
+ listint_t *slow = head;
+ listint_t *fast = head;
 
  if (!head)
  return (NULL);
 
- while (function && koros && koros->next)
+ while (slow && fast && fast->next)
  {
- koros = koros->next->next;
- function = function->next;
- if (koros == function)
+ fast = fast->next->next;
+ slow = slow->next;
+ if (fast == slow)
  {
- function = head;
- while (function != koros)
+ slow = head;
+ while (slow != fast)
  {
- koros = koros->next;
- function = function->next;
+ slow = slow->next;
+ fast = fast->next;
  }
- return (koros);
+ return (fast);
  }
  }
 
  return (NULL);
 }
+
