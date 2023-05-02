@@ -23,8 +23,8 @@ listint_t *find_listint_loop(listint_t *head)
  function = head;
  while (function != koros)
  {
- function = function->next;
  koros = koros->next;
+ function = function->next;
  }
  return (koros);
  }
