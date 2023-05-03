@@ -39,7 +39,7 @@ t = t->next;
 while (t != h)
 {
 nodes++;
-t = ->next;
+t = t->next;
 }
 
 return (nodes);
