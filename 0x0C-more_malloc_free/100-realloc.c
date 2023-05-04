@@ -6,7 +6,10 @@
  * @ptr - pointer
  * @old_size: old size integer
  * @new_size: new size integer
- * Return : NULL, malloc , new pointer, ptr
+ * Return : NULL
+ * Return : malloc
+ * Return : ptr
+ * Return : new_pointer
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
