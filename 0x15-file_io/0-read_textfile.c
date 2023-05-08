@@ -32,5 +32,5 @@ close(s);
 
 free(buf);
 
-return (kor);
+return (kip);
 }
